@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sample_project/presentation/view/SearchPage.dart';
+import 'package:sample_project/presentation/di/SetupDependencies.dart';
+import 'package:sample_project/presentation/view/user/SearchPage.dart';
 
 void main() {
+  setupDependencies();
   runApp(const MyApp());
 }
 
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SearchPage(),
+      home: SearchPage(),
     );
   }
 }
